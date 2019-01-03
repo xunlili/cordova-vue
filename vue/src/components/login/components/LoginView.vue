@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="login-view">
       <i class="iconfont">&#xe65e;</i>
       <el-input class="account" v-model="account" :placeholder="$t('login.LoginView.acc_placeholder')"></el-input>
       <i class="iconfont">&#xe627;</i>
@@ -33,6 +33,7 @@ export default {
 }
 </script>
 <style lang="scss">
+.login-view{
   .el-input__inner{
     background: rgb(94, 53, 190);
     border-radius: 25px;
@@ -54,9 +55,9 @@ export default {
     margin-top: 20px;
     height: 50px;
   }
-  .el-button.is-round{
-    border-radius: 25px;
-  }
+  // .el-button.is-round{
+  //   border-radius: 25px;
+  // }
   .lang{
     // margin-top: 20px;
     width: 100%;
@@ -90,8 +91,5 @@ export default {
   .el-select-dropdown__item.hover, .el-select-dropdown__item:hover{
     background: rgb(94, 53, 190);
   }
-  .icon-down{
-
-  }
-  
+}
 </style>

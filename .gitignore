@@ -2,3 +2,4 @@ node_modules/*
 vue/node_modules/*
 www/*
 package-lock.json
+platforms/
