@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import i18n from '@/LangPack'
 import Cookies from 'js-cookie'
+import axios from 'axios'
 import store from './store'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
@@ -13,6 +14,9 @@ import 'lib-flexible/flexible'
 
 Vue.use(ElementUI)
 Vue.config.productionTip = false
+
+Vue.prototype.$http = axios
+// axios.defaults.withCredentials = true
 
 /* eslint-disable no-new */
 Vue.prototype.cookie = Cookies

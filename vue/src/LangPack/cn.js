@@ -18,6 +18,9 @@ export default {
           label: '英文'
         }
       ]
+    },
+    registerView: {
+      register: '注册'
     }
   }
 }

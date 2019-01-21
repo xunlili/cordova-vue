@@ -18,7 +18,21 @@ export default new Router({
     {
       path: '/content',
       name: 'content',
-      component: () => import('@/components/content')
+      component: () => import('@/components/view/main'),
+      children: [
+        {
+          path: 'password',
+          component: () => import('@/components/view/password')
+        },
+        {
+          path: 'brithday',
+          component: () => import('@/components/view/brithday')
+        },
+        {
+          path: 'personal',
+          component: () => import('@/components/view/personal')
+        }
+      ]
     }
   ]
 })

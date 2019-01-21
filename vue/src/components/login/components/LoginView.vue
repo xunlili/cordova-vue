@@ -17,17 +17,31 @@
           </el-option>
         </el-select>
       </div>
-      <el-button class="login-in" type="success" round>{{$t('login.LoginView.login_in')}}</el-button>
+      <el-button class="login-in" @click="logining" type="success" round>{{$t('login.LoginView.login_in')}}</el-button>
     </div>
 </template>
 <script>
+import { loginApi } from '@/env/api.js'
 export default {
   name: 'LoginView',
   data () {
     return {
-      account: '',
-      password: '',
+      account: 13265563578,
+      password: '123456',
       value: 'cn'
+    }
+  },
+  methods: {
+    async logining () {
+      let reqObj = {
+        account: this.account,
+        password: this.password
+      }
+      let result = await this.$http.post(loginApi, reqObj)
+      if (result.data.status === 200) {
+        this.$router.push('/content/password')
+      }
+      console.log(result)
     }
   }
 }

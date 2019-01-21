@@ -1,12 +1,15 @@
 <template>
   <div id="app">
     <router-view/>
+    <!-- <Tabbar /> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+  }
 }
 </script>
 

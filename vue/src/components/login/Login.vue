@@ -2,6 +2,7 @@
   <div class="first-box">
     <div class="bgd">
       <div class="bgd-over">
+        <img class="logoo" src="../../assets/image/login/logoo.gif" />
         <p class="title">{{$t("login.login_title")}}</p>
         <el-tabs class="tabs" :stretch="true" v-model="activeName" @tab-click="handleClick">
           <el-tab-pane class="tabs-login" :label='$t("login.login")' name="login">
@@ -64,11 +65,17 @@ export default {
     .bgd-over{
       position: relative;
       z-index: 2;
+      .logoo{
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        margin-top: 30px;
+      }
     }
     .title{
       color: #fff;
       font-size: 30px;
-      margin-top: 70px;
+      margin-top: 40px;
     }
     .tabs{
       width: 80%;
