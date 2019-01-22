@@ -16,7 +16,6 @@ export default {
     }
   },
   async mounted () {
-    console.log(registerApi)
   },
   methods: {
     async register () {
@@ -24,8 +23,14 @@ export default {
         account: this.account,
         password: this.password
       }
-      let result = await this.$http.post(registerApi, reqObj)
-      console.log(result)
+      const p = this.$http.post(registerApi, reqObj)
+      try {
+        let result = await p
+        console.log(result)
+        if (result) alert(this.$t('login.correct.registSucc'))
+      } catch (err) {
+        if (err.response.data.status === 4010) alert(this.$t('login.errorTips.sameClient'))
+      }
     }
   }
 }
@@ -47,7 +52,6 @@ export default {
       height: 50px !important;
     }
   }
-  
   .login-in{
     width: 100%;
     margin-top: 20px !important;

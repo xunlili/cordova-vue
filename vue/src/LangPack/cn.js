@@ -1,6 +1,6 @@
 export default {
   login: {
-    login_title: '欢迎登录"忘不了"',
+    login_title: '欢迎登录"啥"',
     login: '登录',
     register: '注册',
     LoginView: {
@@ -21,6 +21,15 @@ export default {
     },
     registerView: {
       register: '注册'
+    },
+    errorTips: {
+      sameClient: '重复用户'
+    },
+    correct: {
+      registSucc: '注册成功'
+    },
+    passManage: {
+      title: '密码管理'
     }
   }
 }
